@@ -2,7 +2,6 @@ import {initializeApp} from 'firebase/app';
 import {getAuth, signInWithRedirect, signInWithPopup, GoogleAuthProvider} from 'firebase/auth'
 import {getFirestore, doc, getDoc, setDoc} from   'firebase/firestore'
 
-import {getFirestore, doc, getDoc, setDoc} from 'firebase/firestore'
 
 const firebaseConfig = {
     apiKey: "AIzaSyDXg2ZgCk_J9GHEFNo_1mFiugbOeLVCSqI",
@@ -34,7 +33,7 @@ const firebaseConfig = {
     console.log(userSnapShot.exists());
 
     if(!userSnapShot.exists()){
-      const [displayName, email] = userAuth;
+      const {displayName, email} = userAuth;
       const createdAt = new Date();
 
     try {
